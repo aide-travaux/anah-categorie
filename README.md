@@ -11,12 +11,15 @@ Retourne la catégorie de ressource selon l'Agence nationale de l'habitat (ANAH)
 ## Liste des paramètres
 
 **income**
+
 Ressources financières du foyer
 
 **household**
+
 Composition du foyer
 
 **codeRegion**
+
 Code région
 
 ## Valeurs de retour
