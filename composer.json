@@ -1,0 +1,22 @@
+{
+    "name": "adrienrosi/anah-category",
+    "description": "Package Anah Category",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrien Rosi",
+            "email": "adrienrosi@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Anah\\Category\\": ""},
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    }
+}
