@@ -1,8 +1,8 @@
 <?php
 
-namespace Anah\Category;
+namespace Anah\Categorie;
 
-class AnahCategory
+class AnahCategorie
 {
     /**
      * Liste des catégories de ressource

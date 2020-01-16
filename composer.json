@@ -1,6 +1,6 @@
 {
-    "name": "adrienrosi/anah-category",
-    "description": "Package Anah Category",
+    "name": "adrien-rosi/anah-categorie",
+    "description": "Package Anah Categorie",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -10,7 +10,7 @@
         }
     ],
     "autoload": {
-        "psr-4": {"Anah\\Category\\": ""},
+        "psr-4": {"Anah\\Categorie\\": ""},
         "exclude-from-classmap": [
             "/Tests/"
         ]

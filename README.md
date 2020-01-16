@@ -1,9 +1,9 @@
-# Anah Category
+# Anah Categorie
 
 ## Description
 
 ```
-AnahCategory::get(int $income, int $household, string $codeRegion): ?string
+AnahCategorie::get(int $income, int $household, string $codeRegion): ?string
 ```
 
 Retourne la catégorie de ressource selon l'Agence nationale de l'habitat (ANAH).
@@ -31,9 +31,9 @@ Retourne la catégorie de ressource, ou NULL en cas de dépassement des plafonds
 ```
 <?php>
 
-use Anah\Category\AnahCategory;
+use Anah\Categorie\AnahCategorie;
 
-AnahCategory::get(
+AnahCategorie::get(
   2, 20000, "11"
 );
 
