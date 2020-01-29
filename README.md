@@ -31,7 +31,7 @@ Retourne la catégorie de ressource, ou NULL en cas de dépassement des plafonds
 ```
 <?php>
 
-use Anah\Categorie\AnahCategorie;
+use AideTravaux\Anah\Categorie\AnahCategorie;
 
 AnahCategorie::get(
   2, 20000, "11"
