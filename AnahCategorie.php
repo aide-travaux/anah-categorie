@@ -1,6 +1,6 @@
 <?php
 
-namespace Anah\Categorie;
+namespace AideTravaux\Anah\Categorie;
 
 class AnahCategorie
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Anah\Categorie\Tests;
+namespace AideTravaux\Anah\Categorie\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Anah\Categorie\AnahCategorie;
+use AideTravaux\Anah\Categorie\AnahCategorie;
 
 class AnahCategorieTest extends TestCase
 {

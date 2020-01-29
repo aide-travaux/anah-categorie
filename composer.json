@@ -1,5 +1,5 @@
 {
-    "name": "adrien-rosi/anah-categorie",
+    "name": "aide-travaux/anah-categorie",
     "description": "Package Anah Categorie",
     "type": "library",
     "license": "MIT",
@@ -10,7 +10,7 @@
         }
     ],
     "autoload": {
-        "psr-4": {"Anah\\Categorie\\": ""},
+        "psr-4": {"AideTravaux\\Anah\\Categorie\\": ""},
         "exclude-from-classmap": [
             "/Tests/"
         ]
