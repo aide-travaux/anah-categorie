@@ -2,15 +2,10 @@
 
 namespace AideTravaux\Anah\Categorie;
 
+use AideTravaux\Core\Data\Entries;
+
 class AnahCategorie
 {
-    /**
-     * Liste des catégories de ressource
-     */
-    const CATEGORIES = [
-        'Très modeste', 'Modeste'
-    ];
-
     /**
      * Liste des codes région
      */
@@ -36,44 +31,44 @@ class AnahCategorie
                 switch ($household) {
                     case 1:
                         if ($income < 20593) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 25068) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                         break;
                     case 2:
                         if ($income < 30225) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 36792) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                         break;
                     case 3:
                         if ($income < 36297) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 44188) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                         break;
                     case 4:
                         if ($income < 42381) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 51597) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                         break;
                     case 5:
                         if ($income < 48488) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 59026) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                         break;
                     default:
                         if ($income < 48488 + ($household - 5) * 6096) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 59026 + ($household - 5) * 7422) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                 }
                 return null;
@@ -82,44 +77,44 @@ class AnahCategorie
                 switch ($household) {
                     case 1:
                         if ($income < 14879) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 19074) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                         break;
                     case 2:
                         if ($income < 21760) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 27896) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                         break;
                     case 3:
                         if ($income < 26170) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 33547) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                         break;
                     case 4:
                         if ($income < 30572) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 39192) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                         break;
                     case 5:
                         if ($income < 34993) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 44860) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                         break;
                     default:
                         if ($income < 34993 + ($household - 5) * 4412) {
-                            return self::CATEGORIES[0];
+                            return Entries::ANAH_CATEGORIES['anah_category_2'];
                         } else if ($income < 44860 + ($household - 5) * 5651) {
-                            return self::CATEGORIES[1];
+                            return Entries::ANAH_CATEGORIES['anah_category_1'];
                         }
                 }
                 return null;
