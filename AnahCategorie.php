@@ -5,7 +5,7 @@ namespace AideTravaux\Anah\Categorie;
 class AnahCategorie
 {
     /**
-     * 
+     * Retourne la catégorie de ressources selon l'ANAH
      * @param int Ressources du foyer
      * @param int Composition du foyer
      * @param string Code administratif de la région
@@ -109,6 +109,98 @@ class AnahCategorie
                         }
                 }
                 return '';
+        }
+    }
+
+    /**
+     * Retourne le plafond de ressources de l'ANAH
+     * @param int Composition du foyer
+     * @param string Code administratif de la région
+     * @return int
+     */
+    public static function getPlafond(int $compositionFoyer, string $codeRegion): int
+    {
+        if (!in_array($codeRegion, Entries::CODES_REGION) || !$compositionFoyer) {
+            return 0;
+        }
+
+        switch ($codeRegion) {
+            case '11':
+                switch ($compositionFoyer) {
+                    case 1:
+                        return 25068;
+                    case 2:
+                        return 36792;
+                    case 3:
+                        return 44188;
+                    case 4:
+                        return 51597;
+                    case 5:
+                        return 59026;
+                    default:
+                        return 59026 + ($compositionFoyer - 5) * 7422;
+                }            
+            default:
+                switch ($compositionFoyer) {
+                    case 1:
+                        return 19074;
+                    case 2:
+                        return 27896;
+                    case 3:
+                        return 33547;
+                    case 4:
+                        return 39192;
+                    case 5:
+                        return 44860;
+                    default:
+                        return 44860 + ($compositionFoyer - 5) * 5651;
+                }
+        }
+    }
+
+    /**
+     * Retourne le plafond de ressources de la catégorie Très modeste
+     * @param int Composition du foyer
+     * @param string Code administratif de la région
+     * @return int
+     */
+    public static function getPlafondTresModeste(int $compositionFoyer, string $codeRegion): int
+    {
+        if (!in_array($codeRegion, Entries::CODES_REGION) || !$compositionFoyer) {
+            return 0;
+        }
+
+        switch ($codeRegion) {
+            case '11':
+                switch ($compositionFoyer) {
+                    case 1:
+                        return 20593;
+                    case 2:
+                        return 30225;
+                    case 3:
+                        return 36297;
+                    case 4:
+                        return 42381;
+                    case 5:
+                        return 48488;
+                    default:
+                        return 48488 + ($compositionFoyer - 5) * 6096;
+                }            
+            default:
+                switch ($compositionFoyer) {
+                    case 1:
+                        return 14879;
+                    case 2:
+                        return 21760;
+                    case 3:
+                        return 26170;
+                    case 4:
+                        return 30572;
+                    case 5:
+                        return 34993;
+                    default:
+                        return 34993 + ($compositionFoyer - 5) * 4412;
+                }
         }
     }
 
