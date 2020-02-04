@@ -11,9 +11,19 @@ class AnahCategorieTest extends TestCase
     /**
      * @dataProvider simulationProvider
      */
-    public function testSimulation(int $ressources, int $compositionFoyer, string $codeRegion, ?string $expect)
+    public function testGet(int $ressources, int $compositionFoyer, string $codeRegion, ?string $expect)
     {
         $this->assertEquals(AnahCategorie::get($ressources, $compositionFoyer, $codeRegion), $expect);
+    }
+
+    public function testGetPlafond()
+    {
+        $this->assertTrue(\is_int(AnahCategorie::getPlafond(0, '')));
+    }
+
+    public function testGetPlafondTresModeste()
+    {
+        $this->assertTrue(\is_int(AnahCategorie::getPlafondTresModeste(0, '')));
     }
 
     public function simulationProvider()
