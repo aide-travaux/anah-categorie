@@ -3,18 +3,18 @@
 ## Description
 
 ```
-AnahCategorie::get(int $income, int $household, string $codeRegion): ?string
+AnahCategorie::get(int $ressources, int $compositionFoyer, string $codeRegion): ?string
 ```
 
 Retourne la catégorie de ressource selon l'Agence nationale de l'habitat (ANAH).
 
 ## Liste des paramètres
 
-**income**
+**ressources**
 
 Ressources financières du foyer
 
-**household**
+**compositionFoyer**
 
 Composition du foyer
 
