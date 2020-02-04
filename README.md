@@ -1,12 +1,26 @@
 # Anah Categorie
 
-## Description
+## Introduction
+
+La classe AnahCategorie retourne toutes les informations relatives aux catégories de ressources de l'agence
+nationale de l'habitat
+
+## Méthodes
 
 ```
 AnahCategorie::get(int $ressources, int $compositionFoyer, string $codeRegion): ?string
 ```
+Retourne la catégorie de ressources selon l'agence nationale de l'habitat (ANAH)
 
-Retourne la catégorie de ressource selon l'Agence nationale de l'habitat (ANAH).
+```
+AnahCategorie::getPlafond(int $compositionFoyer, string $codeRegion): ?string
+```
+Retourne le plafond de ressources de l'agence nationale de l'habitat (ANAH)
+
+```
+AnahCategorie::getPlafondTresModeste(int $compositionFoyer, string $codeRegion): ?string
+```
+Retourne le plafond de ressources de la catégorie "Très modeste"
 
 ## Liste des paramètres
 
@@ -22,9 +36,6 @@ Composition du foyer
 
 Code région
 
-## Valeurs de retour
-
-Retourne la catégorie de ressource, ou NULL en cas de dépassement des plafonds.
 
 ## Exemples
 
@@ -33,12 +44,14 @@ Retourne la catégorie de ressource, ou NULL en cas de dépassement des plafonds
 
 use AideTravaux\Anah\Categorie\AnahCategorie;
 
-AnahCategorie::get(
-  2, 20000, "11"
-);
-
+AnahCategorie::get( 20000, 2, "11" );
 // "Très modeste"
 
+AnahCategorie::getPlafond( 2, "11" );
+// 36792 
+
+AnahCategorie::getPlafondTresModeste( 2, "11" );
+// 30225
 ```
 
 ## Sources
