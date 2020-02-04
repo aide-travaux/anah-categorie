@@ -9,12 +9,12 @@ class AnahCategorie
      * @param int Ressources du foyer
      * @param int Composition du foyer
      * @param string Code administratif de la région
-     * @return null|string
+     * @return string
      */
-    public static function get(int $ressources, int $compositionFoyer, string $codeRegion): ?string
+    public static function get(int $ressources, int $compositionFoyer, string $codeRegion): string
     {
         if (!in_array($codeRegion, Entries::CODES_REGION) || !$compositionFoyer) {
-            return null;
+            return '';
         }
 
         switch ($codeRegion) {
@@ -62,7 +62,7 @@ class AnahCategorie
                             return Entries::CATEGORIES_ANAH['cateogrie_anah_1'];
                         }
                 }
-                return null;
+                return '';
             
             default:
                 switch ($compositionFoyer) {
@@ -108,7 +108,7 @@ class AnahCategorie
                             return Entries::CATEGORIES_ANAH['cateogrie_anah_1'];
                         }
                 }
-                return null;
+                return '';
         }
     }
 
